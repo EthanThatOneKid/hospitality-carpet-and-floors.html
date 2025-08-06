@@ -1,5 +1,9 @@
 # hospitality-carpet-and-floors.html
 
+A professional website for Hospitality Carpet and Floors, offering premium
+carpet, floor, and ceiling cleaning services for San Diego's hospitality
+industry.
+
 Run the web server.
 
 ```sh
