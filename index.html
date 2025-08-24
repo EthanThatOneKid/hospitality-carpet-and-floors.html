@@ -17,6 +17,14 @@
     <meta name="author" content="Jesus - Hospitality Carpet and Floors">
     <link rel="icon" href="logo.png" type="image/png">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+
     <!-- Open Graph / Facebook -->
     <meta
       property="og:title"
@@ -49,6 +57,10 @@
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              "sans": ["Inter", "system-ui", "sans-serif"],
+              "display": ["Playfair Display", "Georgia", "serif"],
+            },
             colors: {
               "primary": "hsl(210, 100%, 26%)",
               "primary-foreground": "hsl(0, 0%, 98%)",
@@ -163,6 +175,42 @@
     <style>
       html {
         scroll-behavior: smooth;
+      }
+
+      /* Typography System */
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      .font-display {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+
+      .font-sans {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      /* Enhanced typography for better readability */
+      .text-hero {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+      }
+
+      .text-subtitle {
+        font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+        line-height: 1.6;
+        letter-spacing: -0.01em;
       }
 
       /* Custom styles for video and animations */
@@ -317,12 +365,12 @@
           class="relative z-20 text-center text-white px-4 max-w-5xl mx-auto"
         >
           <h1
-            class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight drop-shadow-2xl"
+            class="text-hero font-display font-bold mb-8 leading-tight drop-shadow-2xl"
           >
             Premium <span class="text-secondary">Carpet & Floor</span> Cleaning
           </h1>
           <p
-            class="text-xl md:text-2xl mb-12 text-white/95 max-w-3xl mx-auto drop-shadow-lg leading-relaxed"
+            class="text-subtitle font-sans mb-12 text-white/95 max-w-3xl mx-auto drop-shadow-lg leading-relaxed font-light"
           >
             Professional cleaning services that elevate your hospitality
             business in San Diego.
@@ -331,14 +379,14 @@
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:6196491544"
-              class="bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors"
+              class="bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors font-medium"
               aria-label="Call for private consultation"
             >
               Speak with a Design Specialist
             </a>
             <a
               href="#solutions"
-              class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors"
+              class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors font-medium"
               aria-label="View application-based solutions"
             >
               View Solutions
@@ -362,10 +410,14 @@
       <section id="solutions" class="py-20 bg-muted/30">
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2
+              class="text-3xl md:text-4xl font-display font-bold text-primary mb-4"
+            >
               Our Services
             </h2>
-            <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p
+              class="text-xl font-sans text-muted-foreground max-w-3xl mx-auto font-light"
+            >
               Professional cleaning services for San Diego's hospitality
               industry.
             </p>
@@ -394,10 +446,10 @@
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-semibold">
+              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
                 Carpet Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6">
+              <p class="text-muted-foreground mb-6 font-sans">
                 Deep professional carpet cleaning for hotels, restaurants, and
                 commercial spaces.
               </p>
@@ -432,10 +484,10 @@
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-semibold">
+              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
                 Floor Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6">
+              <p class="text-muted-foreground mb-6 font-sans">
                 Comprehensive floor cleaning and maintenance for all commercial
                 flooring types.
               </p>
@@ -470,10 +522,10 @@
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-semibold">
+              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
                 Ceiling Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6">
+              <p class="text-muted-foreground mb-6 font-sans">
                 Professional ceiling cleaning services for complete facility
                 maintenance.
               </p>
@@ -522,10 +574,10 @@
             <!-- Contact Info -->
             <div class="space-y-8">
               <div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
                   Ready to Transform Your Space?
                 </h2>
-                <p class="text-xl text-white/95 mb-8">
+                <p class="text-xl font-sans text-white/95 mb-8 font-light">
                   Speak directly with our design specialists for a private
                   consultation. We'll discuss your specific needs, explore
                   custom solutions, and provide expert guidance for your
@@ -645,7 +697,7 @@
 
             <!-- Features -->
             <div class="space-y-6">
-              <h3 class="text-2xl font-bold mb-6">
+              <h3 class="text-2xl font-display font-bold mb-6">
                 Why Choose Our Consultation?
               </h3>
 
@@ -786,11 +838,11 @@
                 alt="Hospitality Carpet and Floors"
                 class="h-10 w-10 rounded-full"
               >
-              <span class="text-lg font-bold">
+              <span class="text-lg font-display font-bold">
                 Hospitality Carpet & Floors
               </span>
             </div>
-            <p class="text-primary-foreground/90">
+            <p class="text-primary-foreground/90 font-sans">
               Premium carpet and flooring solutions for San Diego's hospitality
               industry. Expert consultation and custom solutions for your unique
               project needs.
@@ -799,23 +851,23 @@
 
           <!-- Quick Links -->
           <div class="space-y-4">
-            <h3 class="text-lg font-semibold">Quick Links</h3>
+            <h3 class="text-lg font-display font-semibold">Quick Links</h3>
             <nav class="space-y-2">
               <a
                 href="#"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 Home
               </a>
               <a
                 href="#solutions"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 Services
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 Contact
               </a>
@@ -824,23 +876,23 @@
 
           <!-- Solutions -->
           <div class="space-y-4">
-            <h3 class="text-lg font-semibold">Our Solutions</h3>
+            <h3 class="text-lg font-display font-semibold">Our Solutions</h3>
             <nav class="space-y-2">
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 High-Traffic Lobbies
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 Luxurious Suites
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
               >
                 Conference Spaces
               </a>
@@ -849,7 +901,7 @@
 
           <!-- Contact Info -->
           <div class="space-y-4">
-            <h3 class="text-lg font-semibold">Consultation</h3>
+            <h3 class="text-lg font-display font-semibold">Consultation</h3>
             <div class="space-y-3">
               <div class="flex items-center space-x-3">
                 <svg
@@ -943,10 +995,10 @@
           class="border-t border-primary-foreground/20 mt-8 pt-8 text-center"
         >
           <div class="mb-4">
-            <h3 class="text-xl font-semibold mb-2">
+            <h3 class="text-xl font-display font-semibold mb-2">
               Ready to Transform Your Space?
             </h3>
-            <p class="text-primary-foreground/90 mb-4">
+            <p class="text-primary-foreground/90 mb-4 font-sans">
               Speak with our design specialists for a private consultation about
               your hospitality project.
             </p>
