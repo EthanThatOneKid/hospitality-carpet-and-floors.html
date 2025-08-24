@@ -15,6 +15,8 @@
       content="carpet cleaning San Diego, floor cleaning services, commercial cleaning San Diego, hospitality cleaning, professional carpet care, San Diego cleaning company"
     >
     <meta name="author" content="Jesus - Hospitality Carpet and Floors">
+    <meta name="theme-color" content="#1e40af">
+    <meta name="color-scheme" content="light dark">
     <link rel="icon" href="logo.png" type="image/png">
 
     <!-- Google Fonts -->
@@ -62,42 +64,42 @@
               "display": ["Playfair Display", "Georgia", "serif"],
             },
             colors: {
-              "primary": "hsl(210, 100%, 26%)",
-              "primary-foreground": "hsl(0, 0%, 98%)",
-              "primary-light": "hsl(210, 100%, 35%)",
-              "primary-dark": "hsl(210, 100%, 18%)",
-              "secondary": "hsl(200, 95%, 47%)",
-              "secondary-foreground": "hsl(0, 0%, 98%)",
-              "secondary-light": "hsl(200, 95%, 55%)",
-              "accent": "hsl(168, 76%, 42%)",
-              "accent-foreground": "hsl(0, 0%, 98%)",
-              "accent-light": "hsl(168, 76%, 50%)",
-              "background": "hsl(0, 0%, 99%)",
-              "foreground": "hsl(210, 30%, 8%)",
-              "muted": "hsl(210, 40%, 96%)",
-              "muted-foreground": "hsl(210, 15%, 40%)",
-              "card": "hsl(0, 0%, 100%)",
-              "card-foreground": "hsl(210, 30%, 8%)",
-              "border": "hsl(210, 30%, 88%)",
-              "glass-bg": "hsl(0, 0%, 100%, 0.8)",
-              "glass-border": "hsl(210, 100%, 26%, 0.1)",
-              "glass-shadow": "hsl(210, 100%, 26%, 0.1)",
+              "primary": "hsl(210, 100%, 20%)", // Darker for better contrast
+              "primary-foreground": "hsl(0, 0%, 100%)", // Pure white for maximum contrast
+              "primary-light": "hsl(210, 100%, 30%)", // Adjusted for better contrast
+              "primary-dark": "hsl(210, 100%, 15%)", // Darker for better contrast
+              "secondary": "hsl(200, 95%, 40%)", // Darker for better contrast
+              "secondary-foreground": "hsl(0, 0%, 100%)", // Pure white for maximum contrast
+              "secondary-light": "hsl(200, 95%, 50%)", // Adjusted for better contrast
+              "accent": "hsl(168, 76%, 35%)", // Darker for better contrast
+              "accent-foreground": "hsl(0, 0%, 100%)", // Pure white for maximum contrast
+              "accent-light": "hsl(168, 76%, 45%)", // Adjusted for better contrast
+              "background": "hsl(0, 0%, 100%)", // Pure white
+              "foreground": "hsl(210, 30%, 5%)", // Darker for better contrast
+              "muted": "hsl(210, 40%, 95%)", // Lighter background
+              "muted-foreground": "hsl(210, 15%, 25%)", // Darker text for better contrast
+              "card": "hsl(0, 0%, 100%)", // Pure white
+              "card-foreground": "hsl(210, 30%, 5%)", // Darker for better contrast
+              "border": "hsl(210, 30%, 85%)", // Darker border for better visibility
+              "glass-bg": "hsl(0, 0%, 100%, 0.95)", // More opaque for better contrast
+              "glass-border": "hsl(210, 100%, 20%, 0.2)", // Darker and more opaque
+              "glass-shadow": "hsl(210, 100%, 20%, 0.15)", // Darker shadow
             },
             backgroundImage: {
               "gradient-primary":
-                "linear-gradient(135deg, hsl(210, 100%, 26%), hsl(200, 95%, 47%))",
+                "linear-gradient(135deg, hsl(210, 100%, 20%), hsl(200, 95%, 40%))",
               "gradient-secondary":
-                "linear-gradient(135deg, hsl(200, 95%, 47%), hsl(168, 76%, 42%))",
+                "linear-gradient(135deg, hsl(200, 95%, 40%), hsl(168, 76%, 35%))",
               "gradient-hero":
-                "linear-gradient(135deg, hsl(210, 100%, 26%, 0.9), hsl(200, 95%, 47%, 0.8))",
+                "linear-gradient(135deg, hsl(210, 100%, 20%, 0.95), hsl(200, 95%, 40%, 0.9))",
               "gradient-card":
-                "linear-gradient(145deg, hsl(0, 0%, 100%, 0.9), hsl(210, 40%, 96%, 0.6))",
+                "linear-gradient(145deg, hsl(0, 0%, 100%, 0.98), hsl(210, 40%, 95%, 0.8))",
             },
             boxShadow: {
-              "soft": "0 2px 8px hsl(210, 100%, 26%, 0.08)",
-              "medium": "0 4px 16px hsl(210, 100%, 26%, 0.12)",
-              "strong": "0 8px 32px hsl(210, 100%, 26%, 0.16)",
-              "glow": "0 0 24px hsl(200, 95%, 47%, 0.3)",
+              "soft": "0 2px 8px hsl(210, 100%, 20%, 0.12)",
+              "medium": "0 4px 16px hsl(210, 100%, 20%, 0.18)",
+              "strong": "0 8px 32px hsl(210, 100%, 20%, 0.22)",
+              "glow": "0 0 24px hsl(200, 95%, 40%, 0.4)",
             },
           },
         },
@@ -177,6 +179,58 @@
         scroll-behavior: smooth;
       }
 
+      /* Accessibility improvements */
+      .focus-visible:focus {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      /* Ensure sufficient contrast for all interactive elements */
+      button:focus,
+      a:focus,
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      /* Enhanced focus states for buttons */
+      .btn-primary:focus-visible,
+      a[href^="tel"]:focus-visible {
+        outline: 3px solid #ffffff;
+        outline-offset: 3px;
+        border-radius: 8px;
+        box-shadow: 0 0 0 3px #1e40af;
+      }
+
+      /* High contrast mode support */
+      @media (prefers-contrast: high) {
+        .glass-card {
+          background: rgba(255, 255, 255, 0.95);
+          border: 2px solid #1e40af;
+        }
+
+        .glass-bg {
+          background: rgba(255, 255, 255, 0.98);
+        }
+      }
+
+      /* Screen reader only utility */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
       /* Typography System */
       body {
         font-family: "Inter", system-ui, sans-serif;
@@ -211,6 +265,180 @@
         font-size: clamp(1.125rem, 2.5vw, 1.5rem);
         line-height: 1.6;
         letter-spacing: -0.01em;
+      }
+
+      /* Advanced Animations and Effects */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      /* Animation Classes */
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .animate-fade-in-left {
+        animation: fadeInLeft 0.8s ease-out forwards;
+      }
+
+      .animate-fade-in-right {
+        animation: fadeInRight 0.8s ease-out forwards;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out forwards;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Staggered animations for children */
+      .stagger-children > * {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .stagger-children > *:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .stagger-children > *:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .stagger-children > *:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .stagger-children > *:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      /* Enhanced hover effects */
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .hover-lift:active {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-glow:hover {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+      }
+
+      /* Gradient text effect */
+      .gradient-text {
+        background: linear-gradient(
+          135deg,
+          #1e40af,
+          #3b82f6,
+          #06b6d4,
+          #3b82f6,
+          #1e40af
+        );
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 4s ease-in-out infinite;
+        filter: drop-shadow(0 2px 4px rgba(30, 64, 175, 0.3));
+      }
+
+      /* Glass morphism enhancements */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .glass-card:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
       }
 
       /* Custom styles for video and animations */
@@ -262,9 +490,170 @@
       .star-filled {
         fill: currentColor;
       }
+
+      /* Enhanced button styles */
+      .btn-primary {
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .btn-primary:hover::before {
+        left: 100%;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0px);
+        box-shadow: 0 6px 18px rgba(30, 64, 175, 0.3);
+      }
+
+      /* Particle effect for hero section */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+      }
+
+      .particle:nth-child(1) {
+        left: 10%;
+        animation-delay: 0s;
+      }
+      .particle:nth-child(2) {
+        left: 20%;
+        animation-delay: 1s;
+      }
+      .particle:nth-child(3) {
+        left: 30%;
+        animation-delay: 2s;
+      }
+      .particle:nth-child(4) {
+        left: 40%;
+        animation-delay: 3s;
+      }
+      .particle:nth-child(5) {
+        left: 50%;
+        animation-delay: 4s;
+      }
+      .particle:nth-child(6) {
+        left: 60%;
+        animation-delay: 5s;
+      }
+      .particle:nth-child(7) {
+        left: 70%;
+        animation-delay: 6s;
+      }
+      .particle:nth-child(8) {
+        left: 80%;
+        animation-delay: 7s;
+      }
+      .particle:nth-child(9) {
+        left: 90%;
+        animation-delay: 8s;
+      }
+
+      /* Loading states and smooth reveals */
+      body:not(.loaded) {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      body.loaded {
+        opacity: 1;
+      }
+
+      .content-visible .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Video loading background fade */
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        z-index: 5;
+        transition: opacity 1s ease-in-out;
+        animation: subtle-pulse 2s ease-in-out infinite;
+      }
+
+      .hero-background.fade-out {
+        opacity: 0;
+        pointer-events: none;
+        animation: none;
+      }
+
+      @keyframes subtle-pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.95;
+        }
+      }
+
+      /* Responsive improvements */
+      @media (max-width: 768px) {
+        .text-hero {
+          font-size: clamp(2rem, 8vw, 3rem);
+        }
+
+        .text-subtitle {
+          font-size: clamp(1rem, 4vw, 1.25rem);
+        }
+      }
     </style>
   </head>
   <body class="min-h-screen bg-background">
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-md z-50"
+    >
+      Skip to main content
+    </a>
+
     <!-- Navigation -->
     <nav
       class="sticky top-0 z-50 backdrop-blur-md bg-glass-bg border-b border-glass-border shadow-soft"
@@ -275,10 +664,11 @@
           <div class="flex items-center space-x-3">
             <img
               src="logo.png"
-              alt="Hospitality Carpet and Floors"
+              alt="Hospitality Carpet and Floors Logo"
               class="h-10 w-10 rounded-full"
+              loading="eager"
             >
-            <span class="text-lg font-bold text-primary">
+            <span class="text-lg font-bold text-primary font-display">
               Hospitality Carpet & Floors
             </span>
           </div>
@@ -288,7 +678,7 @@
             <!-- Prominent Phone Number -->
             <div class="flex items-center space-x-2">
               <svg
-                class="h-4 w-4 text-secondary"
+                class="h-4 w-4 text-foreground"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -303,7 +693,7 @@
               </svg>
               <a
                 href="tel:6196491544"
-                class="text-primary font-semibold hover:text-secondary transition-colors"
+                class="text-primary font-semibold hover:text-secondary transition-colors focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                 aria-label="Call for consultation"
               >
                 (619) 649-1544
@@ -312,7 +702,7 @@
 
             <a
               href="tel:6196491544"
-              class="bg-gradient-primary hover:opacity-90 transition-opacity min-h-[44px] min-w-[44px] text-white px-4 py-2 rounded-md flex items-center space-x-2"
+              class="bg-gradient-primary hover:opacity-90 transition-opacity min-h-[44px] min-w-[44px] text-white px-4 py-2 rounded-md flex items-center space-x-2 focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
               aria-label="Call for private consultation"
             >
               <svg
@@ -336,12 +726,16 @@
       </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <!-- Video Hero Section -->
       <section
         class="relative min-h-screen flex items-center justify-center overflow-hidden"
         aria-label="Hero section with video background"
+        role="banner"
       >
+        <!-- Loading Background (fades out when video loads) -->
+        <div class="hero-background" id="hero-background"></div>
+
         <!-- Video Background -->
         <div class="absolute w-full h-full top-0 left-0 z-0">
           <video
@@ -352,6 +746,13 @@
             playsinline
             class="w-full h-full object-cover"
             aria-hidden="true"
+            preload="metadata"
+            poster="logo.png"
+            id="hero-video"
+            onloadstart="console.log('Video loading started')"
+            onloadeddata="console.log('Video data loaded')"
+            oncanplay="console.log('Video can play')"
+            onerror="console.log('Video error occurred')"
           >
           </video>
         </div>
@@ -360,33 +761,50 @@
         <div class="absolute inset-0 bg-gradient-hero z-10"></div>
         <div class="absolute inset-0 bg-black/40 z-10"></div>
 
+        <!-- Floating Particles -->
+        <div class="particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+
         <!-- Content Overlay -->
         <div
           class="relative z-20 text-center text-white px-4 max-w-5xl mx-auto"
         >
           <h1
-            class="text-hero font-display font-bold mb-8 leading-tight drop-shadow-2xl"
+            class="text-hero font-display font-bold mb-8 leading-tight drop-shadow-2xl animate-fade-in-up"
           >
-            Premium <span class="text-secondary">Carpet & Floor</span> Cleaning
+            Premium <span class="gradient-text">Carpet & Floor</span> Cleaning
           </h1>
           <p
-            class="text-subtitle font-sans mb-12 text-white/95 max-w-3xl mx-auto drop-shadow-lg leading-relaxed font-light"
+            class="text-subtitle font-sans mb-12 text-white max-w-3xl mx-auto drop-shadow-lg leading-relaxed font-medium animate-fade-in-up"
+            style="animation-delay: 0.2s"
           >
             Professional cleaning services that elevate your hospitality
             business in San Diego.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            style="animation-delay: 0.4s"
+          >
             <a
               href="tel:6196491544"
-              class="bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors font-medium"
+              class="btn-primary bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors font-medium hover-glow focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
               aria-label="Call for private consultation"
             >
               Speak with a Design Specialist
             </a>
             <a
               href="#solutions"
-              class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors font-medium"
+              class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors font-medium hover-lift glass-card focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
               aria-label="View application-based solutions"
             >
               View Solutions
@@ -396,43 +814,60 @@
 
         <!-- Enhanced Scroll Indicator -->
         <div
-          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float z-20"
         >
-          <div
-            class="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center"
+          <button
+            type="button"
+            class="w-6 h-10 border-2 border-white rounded-full flex justify-center hover:border-white hover:bg-white/10 transition-all duration-300 focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2 group"
+            aria-label="Scroll to next section"
+            onclick="document.getElementById('solutions').scrollIntoView({behavior: 'smooth'})"
           >
-            <div class="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
-          </div>
+            <div
+              class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce group-hover:scale-110 transition-transform duration-300"
+            >
+            </div>
+          </button>
         </div>
       </section>
 
       <!-- Services Overview Section -->
-      <section id="solutions" class="py-20 bg-muted/30">
+      <section
+        id="solutions"
+        class="py-20 bg-muted/30"
+        aria-labelledby="services-heading"
+      >
         <div class="container mx-auto px-4">
-          <div class="text-center mb-16">
+          <div class="text-center mb-16 stagger-children">
             <h2
               class="text-3xl md:text-4xl font-display font-bold text-primary mb-4"
+              id="services-heading"
             >
               Our Services
             </h2>
             <p
-              class="text-xl font-sans text-muted-foreground max-w-3xl mx-auto font-light"
+              class="text-xl font-sans text-foreground max-w-3xl mx-auto"
             >
               Professional cleaning services for San Diego's hospitality
               industry.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 stagger-children"
+          >
             <!-- Carpet Cleaning -->
             <div
-              class="relative group hover:shadow-medium transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg"
+              class="relative group hover-lift transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg hover-glow overflow-hidden"
             >
               <div
-                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit"
+                class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit group-hover:scale-105 transition-transform duration-300"
               >
                 <svg
-                  class="h-8 w-8 text-secondary"
+                  class="h-8 w-8 text-foreground"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -446,16 +881,18 @@
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
+              <h3
+                class="text-xl text-primary mb-4 font-display font-semibold relative z-10"
+              >
                 Carpet Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6 font-sans">
+              <p class="text-foreground mb-6 font-sans relative z-10">
                 Deep professional carpet cleaning for hotels, restaurants, and
                 commercial spaces.
               </p>
               <a
                 href="tel:6196491544"
-                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block"
+                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block relative z-10 hover-lift focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                 aria-label="Learn more about Carpet Cleaning"
               >
                 Learn More
@@ -464,13 +901,17 @@
 
             <!-- Floor Cleaning -->
             <div
-              class="relative group hover:shadow-medium transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg"
+              class="relative group hover-lift transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg hover-glow overflow-hidden"
             >
               <div
-                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit"
+                class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit group-hover:scale-105 transition-transform duration-300"
               >
                 <svg
-                  class="h-8 w-8 text-accent"
+                  class="h-8 w-8 text-foreground"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -484,16 +925,18 @@
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
+              <h3
+                class="text-xl text-primary mb-4 font-display font-semibold relative z-10"
+              >
                 Floor Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6 font-sans">
+              <p class="text-foreground mb-6 font-sans relative z-10">
                 Comprehensive floor cleaning and maintenance for all commercial
                 flooring types.
               </p>
               <a
                 href="tel:6196491544"
-                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block"
+                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block relative z-10 hover-lift focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                 aria-label="Learn more about Floor Cleaning"
               >
                 Learn More
@@ -502,13 +945,17 @@
 
             <!-- Ceiling Cleaning -->
             <div
-              class="relative group hover:shadow-medium transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg"
+              class="relative group hover-lift transition-all duration-300 bg-gradient-card border border-glass-border backdrop-blur-sm text-center p-8 rounded-lg hover-glow overflow-hidden"
             >
               <div
-                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit"
+                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div
+                class="mx-auto mb-6 p-4 rounded-full bg-glass-bg border border-glass-border w-fit group-hover:scale-105 transition-transform duration-300"
               >
                 <svg
-                  class="h-8 w-8 text-primary"
+                  class="h-8 w-8 text-foreground"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -517,21 +964,23 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   >
                   </path>
                 </svg>
               </div>
-              <h3 class="text-xl text-primary mb-4 font-display font-semibold">
+              <h3
+                class="text-xl text-primary mb-4 font-display font-semibold relative z-10"
+              >
                 Ceiling Cleaning
               </h3>
-              <p class="text-muted-foreground mb-6 font-sans">
+              <p class="text-foreground mb-6 font-sans relative z-10">
                 Professional ceiling cleaning services for complete facility
                 maintenance.
               </p>
               <a
                 href="tel:6196491544"
-                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block"
+                class="bg-gradient-primary hover:opacity-90 transition-opacity text-white px-4 py-2 rounded-md inline-block relative z-10 hover-lift focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                 aria-label="Learn more about Ceiling Cleaning"
               >
                 Learn More
@@ -539,14 +988,17 @@
             </div>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center animate-scale-in"
+            style="animation-delay: 0.6s"
+          >
             <a
               href="tel:6196491544"
               aria-label="Call for consultation"
             >
               <div class="text-center mt-16">
                 <div
-                  class="inline-flex items-center space-x-2 bg-gradient-primary text-white px-8 py-4 rounded-full"
+                  class="inline-flex items-center space-x-2 bg-gradient-primary text-white px-8 py-4 rounded-full hover-lift transition-all duration-300"
                 >
                   <svg
                     class="h-5 w-5 star-filled text-yellow-400"
@@ -568,16 +1020,31 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="py-20 bg-gradient-primary text-white">
-        <div class="container mx-auto px-4">
+      <section
+        class="py-20 bg-gradient-primary text-white relative overflow-hidden"
+        aria-label="Contact and consultation section"
+      >
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-15">
+          <div
+            class="absolute inset-0"
+            style="background-image:
+  radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+  radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+  radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%)"
+          >
+          </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Contact Info -->
-            <div class="space-y-8">
+            <div class="space-y-8 animate-fade-in-left">
               <div>
                 <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
                   Ready to Transform Your Space?
                 </h2>
-                <p class="text-xl font-sans text-white/95 mb-8 font-light">
+                <p class="text-xl font-sans text-white mb-8 font-medium">
                   Speak directly with our design specialists for a private
                   consultation. We'll discuss your specific needs, explore
                   custom solutions, and provide expert guidance for your
@@ -586,9 +1053,11 @@
               </div>
 
               <!-- Contact Details -->
-              <div class="space-y-6">
-                <div class="flex items-center space-x-4">
-                  <div class="p-3 bg-white/10 rounded-full backdrop-blur-sm">
+              <div class="space-y-6 stagger-children">
+                <div class="flex items-center space-x-4 group">
+                  <div
+                    class="p-3 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110"
+                  >
                     <svg
                       class="h-6 w-6"
                       fill="none"
@@ -610,7 +1079,7 @@
                     </h3>
                     <a
                       href="tel:6196491544"
-                      class="text-white/95 hover:text-white transition-colors text-xl font-medium"
+                      class="text-white hover:text-white transition-colors text-xl font-semibold hover-glow"
                       aria-label="Call for private consultation"
                     >
                       (619) 649-1544
@@ -618,8 +1087,10 @@
                   </div>
                 </div>
 
-                <div class="flex items-center space-x-4">
-                  <div class="p-3 bg-white/10 rounded-full backdrop-blur-sm">
+                <div class="flex items-center space-x-4 group">
+                  <div
+                    class="p-3 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110"
+                  >
                     <svg
                       class="h-6 w-6"
                       fill="none"
@@ -644,14 +1115,16 @@
                   </div>
                   <div>
                     <h3 class="font-semibold text-lg">Service Area</h3>
-                    <p class="text-white/95">
+                    <p class="text-white">
                       San Diego County & Surrounding Areas
                     </p>
                   </div>
                 </div>
 
-                <div class="flex items-center space-x-4">
-                  <div class="p-3 bg-white/10 rounded-full backdrop-blur-sm">
+                <div class="flex items-center space-x-4 group">
+                  <div
+                    class="p-3 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110"
+                  >
                     <svg
                       class="h-6 w-6"
                       fill="none"
@@ -669,7 +1142,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold text-lg">Consultation Hours</h3>
-                    <p class="text-white/95">
+                    <p class="text-white">
                       Available for private consultations during business hours
                     </p>
                   </div>
@@ -680,14 +1153,14 @@
               <div class="flex flex-col sm:flex-row gap-4">
                 <a
                   href="tel:6196491544"
-                  class="bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors text-center"
+                  class="btn-primary bg-secondary hover:bg-secondary-light text-white text-lg px-8 py-4 rounded-md shadow-glow min-h-[44px] transition-colors text-center hover-glow focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                   aria-label="Call for private consultation"
                 >
                   Call for Private Consultation
                 </a>
                 <a
                   href="tel:6196491544"
-                  class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors text-center"
+                  class="border border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4 rounded-md backdrop-blur-sm bg-white/10 min-h-[44px] transition-colors text-center hover-lift glass-card focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                   aria-label="Discuss your project with our team"
                 >
                   Discuss Your Project
@@ -696,19 +1169,21 @@
             </div>
 
             <!-- Features -->
-            <div class="space-y-6">
+            <div class="space-y-6 animate-fade-in-right">
               <h3 class="text-2xl font-display font-bold mb-6">
                 Why Choose Our Consultation?
               </h3>
 
               <!-- Feature 1 -->
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6"
+                class="glass-card backdrop-blur-sm border border-white/20 rounded-lg p-6 hover-lift transition-all duration-300"
               >
                 <div class="flex items-start space-x-4">
-                  <div class="p-2 bg-white/10 rounded-lg">
+                  <div
+                    class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-all duration-300"
+                  >
                     <svg
-                      class="h-6 w-6 text-accent"
+                      class="h-6 w-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -726,7 +1201,7 @@
                     <h4 class="font-semibold text-lg text-white mb-2">
                       Licensed & Insured
                     </h4>
-                    <p class="text-white/90">
+                    <p class="text-white">
                       Full insurance coverage and professional licensing for
                       your peace of mind
                     </p>
@@ -736,12 +1211,14 @@
 
               <!-- Feature 2 -->
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6"
+                class="glass-card backdrop-blur-sm border border-white/20 rounded-lg p-6 hover-lift transition-all duration-300"
               >
                 <div class="flex items-start space-x-4">
-                  <div class="p-2 bg-white/10 rounded-lg">
+                  <div
+                    class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-all duration-300"
+                  >
                     <svg
-                      class="h-6 w-6 text-secondary"
+                      class="h-6 w-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -759,7 +1236,7 @@
                     <h4 class="font-semibold text-lg text-white mb-2">
                       Proven Expertise
                     </h4>
-                    <p class="text-white/90">
+                    <p class="text-white">
                       Decades of experience serving San Diego's premier
                       hospitality properties
                     </p>
@@ -769,12 +1246,14 @@
 
               <!-- Feature 3 -->
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6"
+                class="glass-card backdrop-blur-sm border border-white/20 rounded-lg p-6 hover-lift transition-all duration-300"
               >
                 <div class="flex items-start space-x-4">
-                  <div class="p-2 bg-white/10 rounded-lg">
+                  <div
+                    class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-all duration-300"
+                  >
                     <svg
-                      class="h-6 w-6 text-primary"
+                      class="h-6 w-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -792,7 +1271,7 @@
                     <h4 class="font-semibold text-lg text-white mb-2">
                       Dedicated Consultation
                     </h4>
-                    <p class="text-white/90">
+                    <p class="text-white">
                       Personal attention from our design specialists for your
                       unique project needs
                     </p>
@@ -802,19 +1281,19 @@
 
               <!-- Additional CTA -->
               <div
-                class="mt-8 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg"
+                class="mt-8 p-6 glass-card backdrop-blur-sm border border-white/20 rounded-lg hover-lift transition-all duration-300"
               >
                 <h4 class="font-semibold text-lg text-white mb-3">
                   Ready to Get Started?
                 </h4>
-                <p class="text-white/90 mb-4">
+                <p class="text-white mb-4">
                   Our design specialists are ready to discuss your specific
                   needs and provide expert guidance for your hospitality
                   project.
                 </p>
                 <a
                   href="tel:6196491544"
-                  class="w-full bg-secondary hover:bg-secondary-light text-white min-h-[44px] px-4 py-2 rounded-md inline-block text-center transition-colors"
+                  class="w-full bg-secondary hover:bg-secondary-light text-white min-h-[44px] px-4 py-2 rounded-md inline-block text-center transition-colors hover-glow focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
                   aria-label="Call now to speak with a design specialist"
                 >
                   Call (619) 649-1544 Now
@@ -827,22 +1306,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary text-primary-foreground">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer
+      class="bg-primary text-primary-foreground relative overflow-hidden"
+      role="contentinfo"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-8">
+        <div
+          class="absolute inset-0"
+          style="background-image:
+  radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.12) 0%, transparent 45%),
+  radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.12) 0%, transparent 45%),
+  radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%)"
+        >
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 py-12 relative z-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children"
+        >
           <!-- Company Info -->
           <div class="space-y-4">
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-3 group">
               <img
                 src="logo.png"
-                alt="Hospitality Carpet and Floors"
-                class="h-10 w-10 rounded-full"
+                alt="Hospitality Carpet and Floors Logo"
+                class="h-10 w-10 rounded-full group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
               >
               <span class="text-lg font-display font-bold">
                 Hospitality Carpet & Floors
               </span>
             </div>
-            <p class="text-primary-foreground/90 font-sans">
+            <p class="text-primary-foreground font-sans">
               Premium carpet and flooring solutions for San Diego's hospitality
               industry. Expert consultation and custom solutions for your unique
               project needs.
@@ -855,19 +1352,19 @@
             <nav class="space-y-2">
               <a
                 href="#"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 Home
               </a>
               <a
                 href="#solutions"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 Services
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 Contact
               </a>
@@ -880,19 +1377,19 @@
             <nav class="space-y-2">
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 High-Traffic Lobbies
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 Luxurious Suites
               </a>
               <a
                 href="tel:6196491544"
-                class="block text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans"
+                class="block text-primary-foreground hover:text-primary-foreground transition-colors font-sans hover:translate-x-1 transform duration-200"
               >
                 Conference Spaces
               </a>
@@ -903,9 +1400,9 @@
           <div class="space-y-4">
             <h3 class="text-lg font-display font-semibold">Consultation</h3>
             <div class="space-y-3">
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 group">
                 <svg
-                  class="h-5 w-5 text-secondary"
+                  class="h-5 w-5 text-primary-foreground group-hover:scale-110 transition-transform duration-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -920,15 +1417,15 @@
                 </svg>
                 <a
                   href="tel:6196491544"
-                  class="text-primary-foreground/90 hover:text-primary-foreground transition-colors font-medium"
+                  class="text-primary-foreground hover:text-primary-foreground transition-colors font-semibold hover-glow"
                   aria-label="Call for consultation"
                 >
                   (619) 649-1544
                 </a>
               </div>
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 group">
                 <svg
-                  class="h-5 w-5 text-secondary"
+                  class="h-5 w-5 text-primary-foreground group-hover:scale-110 transition-transform duration-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -941,12 +1438,11 @@
                   >
                   </path>
                 </svg>
-                <span class="text-primary-foreground/80"
-                >Design Specialists</span>
+                <span class="text-primary-foreground">Design Specialists</span>
               </div>
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 group">
                 <svg
-                  class="h-5 w-5 text-secondary"
+                  class="h-5 w-5 text-primary-foreground group-hover:scale-110 transition-transform duration-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -966,11 +1462,11 @@
                   >
                   </path>
                 </svg>
-                <span class="text-primary-foreground/80">San Diego County</span>
+                <span class="text-primary-foreground">San Diego County</span>
               </div>
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 group">
                 <svg
-                  class="h-5 w-5 text-secondary"
+                  class="h-5 w-5 text-primary-foreground group-hover:scale-110 transition-transform duration-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -983,7 +1479,7 @@
                   >
                   </path>
                 </svg>
-                <span class="text-primary-foreground/80"
+                <span class="text-primary-foreground"
                 >Private consultations available</span>
               </div>
             </div>
@@ -992,19 +1488,20 @@
 
         <!-- Call to Action -->
         <div
-          class="border-t border-primary-foreground/20 mt-8 pt-8 text-center"
+          class="border-t border-primary-foreground/20 mt-8 pt-8 text-center animate-scale-in"
+          style="animation-delay: 0.5s"
         >
           <div class="mb-4">
             <h3 class="text-xl font-display font-semibold mb-2">
               Ready to Transform Your Space?
             </h3>
-            <p class="text-primary-foreground/90 mb-4 font-sans">
+            <p class="text-primary-foreground mb-4 font-sans">
               Speak with our design specialists for a private consultation about
               your hospitality project.
             </p>
             <a
               href="tel:6196491544"
-              class="inline-flex items-center space-x-2 bg-secondary hover:bg-secondary-light text-white px-6 py-3 rounded-lg font-medium transition-colors min-h-[44px]"
+              class="inline-flex items-center space-x-2 bg-secondary hover:bg-secondary-light text-white px-6 py-3 rounded-lg font-medium transition-colors min-h-[44px] hover-glow hover-lift focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2"
               aria-label="Call for private consultation"
             >
               <svg
@@ -1029,7 +1526,7 @@
         <div
           class="border-t border-primary-foreground/20 mt-8 pt-8 text-center"
         >
-          <p class="text-primary-foreground/80">
+          <p class="text-primary-foreground font-sans">
             © <span id="current-year">2025</span> Hospitality Carpet and Floors.
             All rights reserved. | Premium solutions for San Diego's hospitality
             industry.
@@ -1046,6 +1543,87 @@
         if (yearElement) {
           const currentYear = new Date().getFullYear();
           yearElement.textContent = currentYear;
+        }
+      });
+
+      // Performance optimization: Lazy load non-critical resources
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-in-up");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: "50px",
+        });
+
+        // Observe elements for lazy animation
+        document.querySelectorAll(".stagger-children > *").forEach(
+          (el) => {
+            observer.observe(el);
+          },
+        );
+      }
+
+      // Add loading states for better UX
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add loading class to body
+        document.body.classList.add("loaded");
+
+        // Smooth reveal of content
+        setTimeout(() => {
+          document.body.classList.add("content-visible");
+        }, 100);
+
+        // Handle video loading and background fade
+        const video = document.getElementById("hero-video");
+        const heroBackground = document.getElementById(
+          "hero-background",
+        );
+
+        if (video && heroBackground) {
+          // Function to fade out background
+          const fadeBackground = () => {
+            setTimeout(() => {
+              heroBackground.classList.add("fade-out");
+            }, 500);
+          };
+
+          // Check if video is already loaded
+          if (video.readyState >= 2) {
+            // Video is already loaded, fade background immediately
+            fadeBackground();
+          } else {
+            // Wait for video to load
+            video.addEventListener("loadeddata", fadeBackground);
+            video.addEventListener("canplay", fadeBackground);
+            video.addEventListener("canplaythrough", fadeBackground);
+
+            // Add loading progress indicator
+            video.addEventListener("progress", () => {
+              if (video.buffered.length > 0) {
+                const bufferedEnd = video.buffered.end(
+                  video.buffered.length - 1,
+                );
+                const duration = video.duration;
+                if (bufferedEnd > 0 && duration > 0) {
+                  const progress = (bufferedEnd / duration) * 100;
+                  if (progress > 50) {
+                    // Video is mostly loaded, fade background
+                    fadeBackground();
+                  }
+                }
+              }
+            });
+
+            // Fallback: fade background after a reasonable timeout
+            setTimeout(() => {
+              heroBackground.classList.add("fade-out");
+            }, 3000);
+          }
         }
       });
     </script>
